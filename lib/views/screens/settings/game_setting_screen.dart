@@ -20,14 +20,14 @@ class GameSettingScreen extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              "assets/bg.webp",
-            ),
-            fit: BoxFit.cover,
-          ),
-        ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //     image: AssetImage(
+        //       "assets/bg.webp",
+        //     ),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
         child: Padding(
           padding: EdgeInsets.all(10.w),
           child: ListView(

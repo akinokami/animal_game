@@ -150,7 +150,7 @@ class _PlayScreenState extends State<PlayScreen> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                "assets/bg.webp",
+                "assets/images/background.jpeg",
               ),
               fit: BoxFit.cover,
             ),
