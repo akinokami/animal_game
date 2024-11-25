@@ -1,6 +1,8 @@
 import 'dart:math';
 
+import 'package:animal_game/views/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../Helper/GenerateAnimalList.dart';
 import '../../../models/Animal.dart';
@@ -22,14 +24,16 @@ class _GameScreenState extends State<GameScreen> {
   int round = 1;
   static Random rnd = Random();
 
-  static List<Animal> list = GenerateAnimalList().getRandomAnimal();
-  String strAnimalName = (list..shuffle()).elementAt(rnd.nextInt(6)).name;
+  List<Animal> list = GenerateAnimalList().getRandomAnimal();
+  String strAnimalName = (GenerateAnimalList().getRandomAnimal()..shuffle())
+      .elementAt(rnd.nextInt(6))
+      .name;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/background.jpeg"),
                 fit: BoxFit.cover)),
@@ -44,9 +48,9 @@ class _GameScreenState extends State<GameScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text("درست : $correctAnswer"),
-                      Text("غلط : 3 / $wrongAnswer"),
-                      Text("راند : $round"),
+                      CustomText(text: "${'correct'.tr} : $correctAnswer"),
+                      CustomText(text: "${'wrong'.tr} : $wrongAnswer / 3 "),
+                      CustomText(text: "${'round'.tr} : $round"),
                       IconButton(
                           onPressed: () {
                             setState(() {
@@ -81,12 +85,12 @@ class _GameScreenState extends State<GameScreen> {
                             ),
                             data: list[index].name,
                             child: Card(
-                              shape: RoundedRectangleBorder(
+                              shape: const RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(40))),
                               elevation: 4,
                               child: Container(
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(40)),
                                     color: Colors.lightGreen),
@@ -109,11 +113,11 @@ class _GameScreenState extends State<GameScreen> {
                   setState(() {
                     if (data == strAnimalName) {
                       // print("Correct");
-                      generateSnackbar("Correct", Colors.green);
+                      generateSnackbar('correct'.tr, Colors.green);
                       correctAnswer++;
                     } else {
                       // print("Wrong");
-                      generateSnackbar("Wrong", Colors.redAccent);
+                      generateSnackbar('wrong'.tr, Colors.redAccent);
                       wrongAnswer++;
                       if (wrongAnswer == 3) {
                         btnResumeVisibility = false;
@@ -203,8 +207,11 @@ class _GameScreenState extends State<GameScreen> {
         return AlertDialog(
             title: Column(
               children: [
-                Center(child: const Text("Game Over")),
-                Divider(
+                Center(
+                    child: CustomText(
+                  text: 'game_over'.tr,
+                )),
+                const Divider(
                   color: Colors.black,
                 )
               ],
@@ -215,8 +222,8 @@ class _GameScreenState extends State<GameScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text("Max Round : ${round - 1}"),
-                  Text("Your Rank : $correctAnswer"),
+                  CustomText(text: "${'max_round'.tr} : ${round - 1}"),
+                  CustomText(text: "${'your_rank'.tr} : $correctAnswer"),
                   const SizedBox(
                     height: 40,
                   ),
@@ -230,10 +237,12 @@ class _GameScreenState extends State<GameScreen> {
                               restartGame();
                             });
                           },
-                          child: const Text("Restart")),
+                          child: CustomText(
+                            text: 'restart'.tr,
+                          )),
                       Visibility(
                           visible: btnResumeVisibility,
-                          child: SizedBox(
+                          child: const SizedBox(
                             width: 20,
                           )),
                       Visibility(
@@ -242,7 +251,9 @@ class _GameScreenState extends State<GameScreen> {
                             onPressed: () {
                               Navigator.of(context).pop(false);
                             },
-                            child: const Text("Resume")),
+                            child: CustomText(
+                              text: 'resume'.tr,
+                            )),
                       )
                     ],
                   )
