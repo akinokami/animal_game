@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:minesweeper/utils/enum.dart';
-import 'package:minesweeper/views/screens/match/match_screen.dart';
-import 'package:minesweeper/views/screens/settings/setting_screen.dart';
-import 'package:minesweeper/views/widgets/custom_text.dart';
+import 'package:animal_game/utils/enum.dart';
+import 'package:animal_game/views/screens/match/match_screen.dart';
+import 'package:animal_game/views/screens/settings/setting_screen.dart';
+import 'package:animal_game/views/widgets/custom_text.dart';
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 

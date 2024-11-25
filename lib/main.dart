@@ -1,11 +1,12 @@
+import 'package:animal_game/views/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:minesweeper/utils/color_const.dart';
-import 'package:minesweeper/utils/enum.dart';
-import 'package:minesweeper/views/screens/splash/splash_screen.dart';
+
 import 'package:get/get.dart';
 import 'language/languages.dart';
 import 'services/local_storage.dart';
+import 'utils/color_const.dart';
+import 'utils/enum.dart';
 import 'utils/global.dart';
 
 void main() async {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:minesweeper/utils/color_const.dart';
+import 'package:animal_game/utils/color_const.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class CustomLoading extends StatelessWidget {

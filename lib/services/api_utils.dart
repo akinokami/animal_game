@@ -1,6 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:minesweeper/services/api_constant.dart';
+import 'package:animal_game/services/api_constant.dart';
 
 import '../utils/custom_exception.dart';
 

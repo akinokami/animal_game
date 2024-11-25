@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
-import 'package:minesweeper/views/screens/settings/game_privacy_policy_screen.dart';
+import 'package:animal_game/views/screens/settings/game_privacy_policy_screen.dart';
 
 import '../../../controller/sound_controller.dart';
 import '../../../utils/dimen_const.dart';

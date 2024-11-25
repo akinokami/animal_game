@@ -1,7 +1,7 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:minesweeper/controller/splash_controller.dart';
-import 'package:minesweeper/views/widgets/custom_loading.dart';
+import 'package:animal_game/controller/splash_controller.dart';
+import 'package:animal_game/views/widgets/custom_loading.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/color_const.dart';

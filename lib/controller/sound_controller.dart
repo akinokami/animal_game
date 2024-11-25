@@ -1,6 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
-import 'package:minesweeper/services/local_storage.dart';
+import 'package:animal_game/services/local_storage.dart';
 
 import '../utils/enum.dart';
 

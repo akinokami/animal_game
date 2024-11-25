@@ -1,4 +1,4 @@
-import 'package:minesweeper/services/api_utils.dart';
+import 'package:animal_game/services/api_utils.dart';
 
 class ApiRepo {
   final ApiUtils apiUtils = ApiUtils();

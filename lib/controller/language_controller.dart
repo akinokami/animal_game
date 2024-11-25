@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:minesweeper/utils/enum.dart';
+import 'package:animal_game/utils/enum.dart';
 import 'package:get/get.dart';
 
 import '../services/local_storage.dart';

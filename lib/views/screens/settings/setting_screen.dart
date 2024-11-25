@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:minesweeper/views/screens/settings/language_screen.dart';
+import 'package:animal_game/views/screens/settings/language_screen.dart';
 import 'package:get/get.dart';
 
 import '../../widgets/custom_card.dart';

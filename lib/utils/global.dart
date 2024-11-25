@@ -1,9 +1,10 @@
-import 'package:minesweeper/utils/enum.dart';
+import 'package:animal_game/utils/enum.dart';
 
 class Global {
   static String language = Language.en.name;
 
-  static String policyEn = """
+  static String policyEn =
+      """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,8 @@ The app does use third-party services that may collect information used to ident
 </html>
 """;
 
-  static String policyZh = """
+  static String policyZh =
+      """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +96,8 @@ The app does use third-party services that may collect information used to ident
 </html>
 """;
 
-  static String policyVi = """
+  static String policyVi =
+      """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -263,7 +266,8 @@ Thu thập và sử dụng thông tin Để có trải nghiệm tốt hơn, khi 
 </html>
 """;
 
-  static String policyHi = '''
+  static String policyHi =
+      '''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -351,7 +355,8 @@ Thu thập và sử dụng thông tin Để có trải nghiệm tốt hơn, khi 
 </html>
 ''';
 
-  static String policyKo = """
+  static String policyKo =
+      """
 <!DOCTYPE html>
 <html lang="ko">
 <head>
